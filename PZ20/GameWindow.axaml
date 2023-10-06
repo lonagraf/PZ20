@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="PZ20.GameWindow"
-        Title="GameWindow">
+        Title="Игры">
     <Grid>
         <DataGrid Name="GameGrid" x:CompileBindings="False">
             <DataGrid.Columns>

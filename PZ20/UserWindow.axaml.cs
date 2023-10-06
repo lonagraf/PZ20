@@ -9,7 +9,7 @@ namespace PZ20;
 
 public partial class UserWindow : Window
 {
-    private string _connString = "server=localhost;database=onlinegamestore;port=3306;User Id=root;password=IGraf123*";
+    private string _connString = "server=10.10.1.24;database=pro1_4;port=3306;User Id=user_01;password=user01pro";
     private List<User> _users;
     private MySqlConnection _connection;
     public UserWindow()

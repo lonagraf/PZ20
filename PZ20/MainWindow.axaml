@@ -4,12 +4,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="PZ20.MainWindow"
-        Title="PZ20">
+        Title="Главное окно">
      <Grid>
             <Menu Height="25" VerticalAlignment="Top" Background="MediumPurple">
-                <MenuItem Header="User" Click="MenuItem_OnClickUser"/>
-                <MenuItem Header="Game" Click="MenuItem_OnClickGame"/>
-                <MenuItem Header="Add" Click="MenuItem_OnClick"/>
+                <MenuItem Header="Add" Click="MenuItem_OnClickAdd"/>
+                <MenuItem Header="Delete" Click="MenuItem_OnClickDelete"/>
                 <TextBlock VerticalAlignment="Center">Поиск по играм: </TextBlock>
                 <TextBox Name="txtSearch" Width="200" Margin="10 0 0 0 " TextChanged="TxtSearch_OnTextChanged"/>
             </Menu>
@@ -21,5 +20,9 @@
                 <DataGridTextColumn Header="Был в сети" Binding="{Binding Online}"/>
             </DataGrid.Columns>
         </DataGrid>
+         <StackPanel Orientation="Horizontal">
+             <Button Content="Пользователи" Click="Button_OnClickUserWindow" Background="MediumPurple"/>
+             <Button Content="Игры" Click="Button_OnClickGameWindow" Background="MediumPurple"/>
+         </StackPanel>
     </Grid>
 </Window>

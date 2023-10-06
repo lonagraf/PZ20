@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="PZ20.UserWindow"
-        Title="UserWindow">
+        Title="Пользователи">
     <Grid>
         <DataGrid Name="UserGrid" x:CompileBindings="False" >
             <DataGrid.Columns>

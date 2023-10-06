@@ -9,14 +9,14 @@ namespace PZ20;
 
 public partial class GameWindow : Window
 {
-    private string _connString = "server=localhost;database=onlinegamestore;port=3306;User Id=root;password=IGraf123*";
+    private string _connString = "server=10.10.1.24;database=pro1_4;port=3306;User Id=user_01;password=user01pro";
     private List<Game> _games;
     private MySqlConnection _connection;
     public GameWindow()
     {
         InitializeComponent();
-        string fullTable = "select GameID, GameName, Price, Developer from game " +
-                           "join onlinegamestore.developer d on d.DeveloperID = game.Developer;";
+        string fullTable = "select GameID, GameName, Price, Developer from Game " +
+                           "join pro1_4.Developer d on d.DeveloperID = Game.Developer;";
         ShowTable(fullTable);
     }
     public void ShowTable(string sql)
