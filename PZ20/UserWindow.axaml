@@ -1,0 +1,20 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="PZ20.UserWindow"
+        Title="UserWindow">
+    <Grid>
+        <DataGrid Name="UserGrid" x:CompileBindings="False" >
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding UserID}"/>
+                <DataGridTextColumn Header="Логин" Binding="{Binding UserName}"/>
+                <DataGridTextColumn Header="Дата рождения" Binding="{Binding DateOfBirth}"/>
+                <DataGridTextColumn Header="Дата регистрации" Binding="{Binding RegistrationDate}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Content="Back" Background="MediumPurple" Click="Button_OnClick"/>
+    </Grid>
+   
+</Window>

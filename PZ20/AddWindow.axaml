@@ -1,0 +1,17 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="PZ20.AddWindow"
+        Title="AddWindow">
+    <StackPanel>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Имя пользователя: </TextBlock>
+        <TextBox Name="UsernameTextBox" Text="Username" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Width="150"/>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Название игры: </TextBlock>
+        <TextBox Name="GameNameTextBox" Text="Game" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Width="150"/>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Онлайн: </TextBlock>
+        <TextBox Name="OnlineTextBox" Text="Online" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Width="150"/>
+        <Button Content="Back" VerticalAlignment="Center" HorizontalAlignment="Center" Background="MediumPurple" Click="Button_OnClick"/>
+    </StackPanel>
+</Window>
