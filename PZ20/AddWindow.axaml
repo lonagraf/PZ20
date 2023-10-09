@@ -12,7 +12,10 @@
         <TextBox Name="GameNameTextBox" Text="Game" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Width="150"/>
         <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Онлайн: </TextBlock>
         <TextBox Name="OnlineTextBox" Text="Online" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Width="150"/>
-        <Button Content="Back" VerticalAlignment="Center" HorizontalAlignment="Center" Background="MediumPurple" Click="Button_OnClick"/>
-        <!--<Button Content="Add" VerticalAlignment="Center" HorizontalAlignment="Center" Background="MediumPurple" Click="Button_OnClick1"/>-->
+        <!--<DatePicker Name="OnlineDatePicker" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" />-->
+        <StackPanel>
+        <Button Content="Back" VerticalAlignment="Center" HorizontalAlignment="Center"  Background="MediumPurple" Margin="10" Click="BackBtnOnClick"/>
+        <Button Content="Add" VerticalAlignment="Center" HorizontalAlignment="Center" Background="MediumPurple" Margin="10" Click="AddBtnOnClick"/>
+        </StackPanel>
     </StackPanel>
 </Window>

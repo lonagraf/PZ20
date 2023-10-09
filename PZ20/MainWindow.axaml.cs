@@ -9,18 +9,18 @@ namespace PZ20;
 
 public partial class MainWindow : Window
 {
-    private string _connString = "server=10.10.1.24;database=pro1_4;port=3306;User Id=user_01;password=user01pro";
+    private string _connString = "server=localhost;database=onlinegamestore;port=3306;User Id=root;password=IGraf123*";
     private List<PersonalAccount> _personalAccount;
     private MySqlConnection _connection;
     public string fullTable =
-        "select PersonalAccountID, UserName, GameName, Online from pro1_4.PersonalAccount " +
-        "join pro1_4.User u on u.UserID = PersonalAccount.User " +
-        "join pro1_4.Game g on g.GameID = PersonalAccount.Game;";
+        "select PersonalAccountID, UserName, GameName, Online from onlinegamestore.PersonalAccount " +
+        "join onlinegamestore.User u on u.UserID = PersonalAccount.User " +
+        "join onlinegamestore.Game g on g.GameID = PersonalAccount.Game;";
 
     public MainWindow()
     {
         InitializeComponent();
-        
+        Icon = new WindowIcon("icons\\home.png");
         ShowTable(fullTable);
     }
 
@@ -37,7 +37,7 @@ public partial class MainWindow : Window
             {
                 PersonalAccountID = reader.GetInt32("PersonalAccountID"),
                 GameName = reader.GetString("GameName"),
-                Online = reader.GetDateTime("Online"),
+                Online = reader.GetString("Online"),
                 UserName = reader.GetString("UserName")
             };
             _personalAccount.Add(currentAccount);
@@ -55,9 +55,26 @@ public partial class MainWindow : Window
 
     private void MenuItem_OnClickAdd(object? sender, RoutedEventArgs e)
     {
-            this.Hide();
+        /*this.Hide();
             AddWindow addWindow = new AddWindow();
-            addWindow.Show();
+            addWindow.Show();*/
+        AddWindow addWindow = new AddWindow();
+        addWindow.ShowDialog(this);
+        ShowTable(fullTable);
+    }
+    private void MenuItem_OnClickEdit(object? sender, RoutedEventArgs e)
+    {
+        PersonalAccount selectedAccount = OnlineGameStoreGrid.SelectedItem as PersonalAccount;
+        if (selectedAccount != null)
+        {
+            EditWindow editWindow = new EditWindow(selectedAccount);
+            editWindow.Show();
+            ShowTable(fullTable);
+        }
+        else
+        {
+            Console.WriteLine("Выберите строку для редактирования!!!");
+        }
     }
 
     public void Delete(int id)
@@ -65,7 +82,7 @@ public partial class MainWindow : Window
         using (MySqlConnection connection = new MySqlConnection(_connString))
         {
             connection.Open();
-            string sql = "delete from pro1_4.PersonalAccount where PersonalAccountID = @PersonalAccountID";
+            string sql = "delete from onlinegamestore.PersonalAccount where PersonalAccountID = @PersonalAccountID";
             MySqlCommand command = new MySqlCommand(sql, connection);
             command.Parameters.AddWithValue("@PersonalAccountID", id);
             command.ExecuteNonQuery();
@@ -99,4 +116,5 @@ public partial class MainWindow : Window
         GameWindow gameWindow = new GameWindow();
         gameWindow.Show();
     }
+    
 }

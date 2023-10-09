@@ -13,19 +13,22 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = PZ20
-build_property.ProjectDir = /home/student/Desktop/kursovaya/PZ201/PZ20/
+build_property.ProjectDir = C:\Users\lonah\RiderProjects\PZ201\PZ20\
 
-[/home/student/Desktops/Desktop1/kursovaya/PZ201/PZ20/AddWindow.axaml]
+[C:/Users/lonah/RiderProjects/PZ201/PZ20/AddWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/student/Desktops/Desktop1/kursovaya/PZ201/PZ20/App.axaml]
+[C:/Users/lonah/RiderProjects/PZ201/PZ20/App.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/student/Desktops/Desktop1/kursovaya/PZ201/PZ20/GameWindow.axaml]
+[C:/Users/lonah/RiderProjects/PZ201/PZ20/EditWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/student/Desktops/Desktop1/kursovaya/PZ201/PZ20/MainWindow.axaml]
+[C:/Users/lonah/RiderProjects/PZ201/PZ20/GameWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
-[/home/student/Desktops/Desktop1/kursovaya/PZ201/PZ20/UserWindow.axaml]
+[C:/Users/lonah/RiderProjects/PZ201/PZ20/MainWindow.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[C:/Users/lonah/RiderProjects/PZ201/PZ20/UserWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

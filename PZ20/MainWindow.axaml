@@ -8,6 +8,7 @@
      <Grid>
             <Menu Height="25" VerticalAlignment="Top" Background="MediumPurple">
                 <MenuItem Header="Add" Click="MenuItem_OnClickAdd"/>
+                <MenuItem Header="Edit" Click="MenuItem_OnClickEdit"/>
                 <MenuItem Header="Delete" Click="MenuItem_OnClickDelete"/>
                 <TextBlock VerticalAlignment="Center">Поиск по играм: </TextBlock>
                 <TextBox Name="txtSearch" Width="200" Margin="10 0 0 0 " TextChanged="TxtSearch_OnTextChanged"/>

@@ -5,6 +5,7 @@
       <map>
         <entry key="PZ20/AddWindow.axaml" value="PZ20/PZ20.csproj" />
         <entry key="PZ20/App.axaml" value="PZ20/PZ20.csproj" />
+        <entry key="PZ20/EditWindow.axaml" value="PZ20/PZ20.csproj" />
         <entry key="PZ20/GameWindow.axaml" value="PZ20/PZ20.csproj" />
         <entry key="PZ20/MainWindow.axaml" value="PZ20/PZ20.csproj" />
         <entry key="PZ20/UserWindow.axaml" value="PZ20/PZ20.csproj" />

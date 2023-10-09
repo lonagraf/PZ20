@@ -4,6 +4,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="PZ20.EditWindow"
-        Title="EditWindow">
-    Welcome to Avalonia!
+        Title="Окно редактирования">
+    <StackPanel>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Имя пользователя: </TextBlock>
+        <TextBox Name="UsernameTextBox" Text="Username" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Width="150"/>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Название игры: </TextBlock>
+        <TextBox Name="GameNameTextBox" Text="Game" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Width="150"/>
+        <TextBlock VerticalAlignment="Center" HorizontalAlignment="Center">Онлайн: </TextBlock>
+        <TextBox Name="OnlineTextBox" Text="Online" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Width="150"/>
+        <StackPanel>
+        <Button Content="Back" VerticalAlignment="Center" HorizontalAlignment="Center"  Background="MediumPurple" Margin="10" Click="BackBtnOnClick"/>
+        <Button Content="Edit" VerticalAlignment="Center" HorizontalAlignment="Center" Background="MediumPurple" Margin="10" Click="EditBtnOnClick"/>
+        </StackPanel>
+    </StackPanel>
 </Window>
