@@ -9,11 +9,11 @@ namespace PZ20;
 
 public partial class AddWindow : MainWindow
 {
-    private string _connString = "server=localhost;database=onlinegamestore;port=3306;User Id=root;password=IGraf123*";
+    private string _connString = "server=10.10.1.24;database=pro1_4;port=3306;User Id=user_01;password=user01pro";
     public AddWindow()
     {
         InitializeComponent();
-        Icon = new WindowIcon("icons\\square-plus.png");
+        Icon = new WindowIcon("icons/square-plus.png");
     }
 
     private void BackBtnOnClick(object? sender, RoutedEventArgs e)
@@ -32,7 +32,7 @@ public partial class AddWindow : MainWindow
         {
             connection.Open();
             string sql =
-                "INSERT INTO personalaccount (User, Game, Online) VALUES (@User, @Game, @Online)";
+                "INSERT INTO PersonalAccount (User, Game, Online) VALUES (@User, @Game, @Online)";
             MySqlCommand command = new MySqlCommand(sql, connection);
             command.Parameters.AddWithValue("@User", userName);
             command.Parameters.AddWithValue("@Game", gameName);

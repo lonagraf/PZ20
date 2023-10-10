@@ -8,13 +8,13 @@ namespace PZ20;
 
 public partial class EditWindow : Window
 {
-    private string _connString = "server=localhost;database=onlinegamestore;port=3306;User Id=root;password=IGraf123*";
+    private string _connString = "server=10.10.1.24;database=pro1_4;port=3306;User Id=user_01;password=user01pro";
     private PersonalAccount _personalAccount;
     public EditWindow(PersonalAccount personalAccount)
     {
         _personalAccount = personalAccount;
         InitializeComponent();
-        Icon = new WindowIcon("icons\\file-edit.png");
+        Icon = new WindowIcon("icons/file-edit.png");
         UsernameTextBox.Text = _personalAccount.UserName;
         GameNameTextBox.Text = _personalAccount.GameName;
         OnlineTextBox.Text = _personalAccount.Online;
@@ -37,7 +37,7 @@ public partial class EditWindow : Window
         using (MySqlConnection connection = new MySqlConnection(_connString))
         {
             connection.Open();
-            string sql = "UPDATE onlinegamestore.personalaccount SET `User` = @User, Game = @Game, Online = @Online WHERE PersonalAccountID = @Id";
+            string sql = "UPDATE pro1_4.PersonalAccount SET `User` = @User, Game = @Game, Online = @Online WHERE PersonalAccountID = @Id";
             MySqlCommand command = new MySqlCommand(sql, connection);
             command.Parameters.AddWithValue("@User", userName);
             command.Parameters.AddWithValue("@Game", gameName);
